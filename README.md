@@ -1,4 +1,4 @@
-# odin-cv-application
+# odin-shopping-cart
 Shopping Cart project from Javascript section of the Full Stack Javascript Course on The Odin Project.
 
 ### Project Website
