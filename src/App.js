@@ -9,8 +9,19 @@ function App() {
   const [cart, setCart] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
 
-  function handleAddToCart(item) {
-    
+  function handleAddToCart(item, price) {
+    let updated = cart.slice();
+
+    for (let i = 0; i < updated.length; i++) {
+      if (updated[i].name === item) {
+        updated[i].quantity += 1;
+        updated[i].total += price;
+      } else {
+        updated.push({ name: {item}, quantity: 1, total: {price} });
+      }
+    }
+
+    setCart(updated);
   }
 
   useEffect(() => {
