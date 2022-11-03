@@ -9,15 +9,15 @@ function App() {
   const [cart, setCart] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
 
-  function handleAddItem(item, price) {
+  function handleAddItem(item, quantity = 1, price) {
     let updated = cart.slice();
 
     for (let i = 0; i < updated.length; i++) {
       if (updated[i].name === item) {
-        updated[i].quantity += 1;
+        updated[i].quantity += quantity;
         updated[i].total += price;
       } else {
-        updated.push({ name: {item}, quantity: 1, total: {price} });
+        updated.push({ name: {item}, quantity: {quantity}, total: {price} });
       }
     }
 
