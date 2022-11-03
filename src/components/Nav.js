@@ -1,13 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Nav.css';
 
 function Nav() {
   return (
     <nav className="navbar">
-        <div className="nav-title">Odin Shopping Cart</div>
+        <Link to="/" className="nav-title-link">
+            <div className="nav-title">Odin Shopping Cart</div>
+        </Link>
         <ul className="nav-links">
-            <li>Home</li>
-            <li>Products</li>
+            <Link to="/" className="nav-link">
+                <li>Home</li>
+            </Link>
+            <Link to="/products" className="nav-link">
+                <li>Products</li>
+            </Link>
             <li>Cart</li>
         </ul>
     </nav>
