@@ -1,3 +1,18 @@
-.App {
-  text-align: center;
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 8vh 1fr 4vh;
+  grid-template-areas: 
+  "nav"
+  "content"
+  "footer";
+  min-height: 100vh;
+}
+
+.footer {
+  background-color: #DBE2EF;
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
