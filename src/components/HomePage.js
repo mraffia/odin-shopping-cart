@@ -11,9 +11,7 @@ function HomePage() {
             <p className="home-text">- Charm Lover Salubra</p>
             <button className="shop-button">Shop Now</button>
           </div>
-          <div className="home-image-container">
-            <img className="home-image" src={Salubra} alt="Salubra" />
-          </div>
+          <div className="home-image-container"></div>
         </div>
     </div>
   );

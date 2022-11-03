@@ -3,8 +3,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 80%;
-    animation: fadeInAnimation ease 1s;
+    height: 100%;
+    background-image: url('../images/salubra.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.home-subcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1400px;
+    animation: fadeInAnimation ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -18,17 +28,12 @@
     }
 }
 
-.home-subcontainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: 1400px;
-}
-
 .home-texts-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 40px;
+    color: white;
 }
 
 .home-heading {
@@ -43,15 +48,16 @@
     padding: 16px;
     border: none;
     cursor: pointer;
-    opacity: 0.8;
-    border-radius: 24px;
+    border-radius: 48px;
     width: 240px;
     font-weight: bold;
     font-size: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: transform .2s;
 }
 
 .shop-button:hover {
-    opacity: 1;
+    transform: scale(1.06);
 }
 
 .home-image-container {
@@ -62,5 +68,5 @@
 
 .home-image {
     max-width: 700px;
-    border-radius: 48px;
+    border-radius: 36px;
 }
