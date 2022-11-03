@@ -7,7 +7,7 @@ function HomePage() {
     <div className="home-container">
         <div className="home-subcontainer">
           <div className="home-texts-container">
-            <h1 className="home-heading">I can see you've started your own collection. Very nice! I'll show you some of my own, and you can take one home with you if you like!</h1>
+            <h1 className="home-heading">Charms are gorgeous, mystical, one-of-a-kind accessories with a spark of power woven into their cores. Take a look at some of the Charms I have for sale!</h1>
             <p className="home-text">- Charm Lover Salubra</p>
             <Link to="/products">
               <button className="shop-button" type="button" >Shop Now</button> 
