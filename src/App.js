@@ -17,18 +17,22 @@ function App() {
   const [cart, setCart] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
 
-  function handleAddItem(item, quantity = 1, price) {
+  function handleAddItem(item, price, quantity = 1) {
     let updated = cart.slice();
+    let inCart = false;
 
     for (let i = 0; i < updated.length; i++) {
       if (updated[i].name === item) {
         updated[i].quantity += quantity;
         updated[i].total += price;
-      } else {
-        updated.push({ name: {item}, quantity: {quantity}, total: {price} });
+        inCart = true;
       }
     }
-
+    
+    if (!inCart) {
+      updated.push({ name: item, quantity: quantity, total: price });
+    }
+    
     setCart(updated);
   }
 
@@ -60,12 +64,12 @@ function App() {
   return (
     <BrowserRouter>
       <div className="container">
-        <Nav cart={cart} totalPrice={totalPrice} />
+        <Nav cart={cart} totalPrice={totalPrice} handleAddItem={handleAddItem} handleRemoveItem={handleRemoveItem} />
 
         <div className="content">
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/products" element={<ProductsPage items={items} />} />
+            <Route path="/products" element={<ProductsPage items={items} handleAddItem={handleAddItem} />} />
           </Routes>
         </div>
 

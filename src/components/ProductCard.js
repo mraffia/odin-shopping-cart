@@ -7,7 +7,7 @@ import SalubraGhost from '../images/salubraGhost.png';
 import ShamanStone from '../images/shamanStone.png';
 import SteadyBody from '../images/steadyBody.png';
 
-function ProductCard({ item }) {
+function ProductCard({ item, handleAddItem }) {
     const productName = item.name;
     const productPrice = item.price;
     let finalImage;
@@ -24,7 +24,11 @@ function ProductCard({ item }) {
         finalImage = ShamanStone;
     } else if (productName === "Steady Body") {
         finalImage = SteadyBody;
-    } 
+    }
+
+    function handleClick(item) {
+        handleAddItem(item.name, item.price);
+    }
 
     return (
         <div className="card-container">
@@ -34,7 +38,7 @@ function ProductCard({ item }) {
             <div className="card-info-container">
                 <div className="card-name">{productName}</div>
                 <div className="card-price">{productPrice} Geo</div>
-                <button type="button">Add to Cart</button>
+                <button type="button" onClick={() => handleClick(item)}>Add to Cart</button>
             </div>
         </div>
     );
