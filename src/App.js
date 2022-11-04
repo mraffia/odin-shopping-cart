@@ -32,7 +32,7 @@ function App() {
     if (!inCart) {
       updated.push({ name: item, quantity: quantity, total: price });
     }
-    
+
     setCart(updated);
   }
 
@@ -59,6 +59,8 @@ function App() {
       total += cart[i].total;
     }
     setTotalPrice(total);
+    console.log(cart);
+    console.log(totalPrice);
   }, [cart]);
 
   return (

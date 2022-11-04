@@ -9,12 +9,12 @@
     background-position: center;
 }
 
-
 .home-subcontainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     max-width: 1400px;
-    animation: fadeInAnimation ease 2s;
+    margin: 40px;
+    animation: fadeInAnimation ease 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }

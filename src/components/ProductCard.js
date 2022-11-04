@@ -38,7 +38,7 @@ function ProductCard({ item, handleAddItem }) {
             <div className="card-info-container">
                 <div className="card-name">{productName}</div>
                 <div className="card-price">{productPrice} Geo</div>
-                <button type="button" onClick={() => handleClick(item)}>Add to Cart</button>
+                <button className="card-button" type="button" onClick={() => handleClick(item)}>Add to Cart</button>
             </div>
         </div>
     );
