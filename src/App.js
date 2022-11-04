@@ -7,6 +7,8 @@ import ProductsPage from './components/ProductsPage.js';
 
 function App() {
   const [items, setItems] = useState([
+    { name: "Gathering Swarm", price: 300 },
+    { name: "Heavy Blow", price: 350 },
     { name: "Lifeblood Heart", price: 250 },
     { name: "Longnail", price: 300 },
     { name: "Quick Focus", price: 800 },
