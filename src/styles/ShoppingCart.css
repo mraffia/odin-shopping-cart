@@ -29,7 +29,9 @@
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
-    animation-duration: 0.4s
+    animation-duration: 0.4s;
+    border: none;
+    border-radius: 10px;
 }
 
 /* Add Animation */
@@ -44,32 +46,29 @@
 }
 
 /* The Close Button */
-.close {
+.close-modal {
     color: white;
     float: right;
-    font-size: 28px;
+    font-size: 36px;
     font-weight: bold;
+    opacity: 0.8;
+    cursor: pointer;
 }
 
-.close:hover,
-.close:focus {
-    color: #000;
+.close-modal:hover,
+.close-modal:focus {
+    opacity: 1;
     text-decoration: none;
-    cursor: pointer;
 }
 
 .modal-header {
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-color: #112D4E;
     color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .modal-body {
-    padding: 2px 16px;
-}
-
-.modal-footer {
-    padding: 2px 16px;
-    background-color: #5cb85c;
-    color: white;
+    padding: 16px;
 }
