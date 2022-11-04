@@ -6,6 +6,14 @@ import HomePage from './components/HomePage.js';
 import ProductsPage from './components/ProductsPage.js';
 
 function App() {
+  const [items, setItems] = useState([
+    { name: "Lifeblood Heart", price: 250 },
+    { name: "Longnail", price: 300 },
+    { name: "Quick Focus", price: 800 },
+    { name: "Salubra's Blessing", price: 800 },
+    { name: "Shaman Stone", price: 220 },
+    { name: "Steady Body", price: 120 },
+  ]);
   const [cart, setCart] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
 
@@ -52,12 +60,12 @@ function App() {
   return (
     <BrowserRouter>
       <div className="container">
-        <Nav />
+        <Nav cart={cart} totalPrice={totalPrice} />
 
         <div className="content">
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/products" element={<ProductsPage />} />
+            <Route path="/products" element={<ProductsPage items={items} />} />
           </Routes>
         </div>
 
