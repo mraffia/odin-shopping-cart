@@ -86,7 +86,6 @@ function App() {
         cartDisplay={cartDisplay}
         handleAddItem={handleAddItem}
         handleRemoveItem={handleRemoveItem}
-        handleOpenCartDisplay={handleOpenCartDisplay}
         handleCloseCartDisplay={handleCloseCartDisplay}
         />
 
