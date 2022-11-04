@@ -4,6 +4,7 @@ import './App.css';
 import Nav from './components/Nav.js';
 import HomePage from './components/HomePage.js';
 import ProductsPage from './components/ProductsPage.js';
+import ShoppingCart from './components/ShoppingCart.js';
 
 function App() {
   const [items, setItems] = useState([
@@ -18,6 +19,8 @@ function App() {
   ]);
   const [cart, setCart] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [totalItems, setTotalItems] = useState(0);
+  const [cartDisplay, setCartDisplay] = useState(false);
 
   function handleAddItem(item, price, quantity = 1) {
     let updated = cart.slice();
@@ -55,6 +58,14 @@ function App() {
     setCart(updated);
   }
 
+  function handleOpenCartDisplay() {
+    setCartDisplay(true);
+  }
+
+  function handleCloseCartDisplay() {
+    setCartDisplay(false);
+  }
+
   useEffect(() => {
     let total = 0;
     for (let i = 0; i < cart.length; i++) {
@@ -62,13 +73,22 @@ function App() {
     }
     setTotalPrice(total);
     console.log(cart);
-    console.log(totalPrice);
   }, [cart]);
 
   return (
     <BrowserRouter>
       <div className="container">
-        <Nav cart={cart} totalPrice={totalPrice} handleAddItem={handleAddItem} handleRemoveItem={handleRemoveItem} />
+        <Nav handleOpenCartDisplay={handleOpenCartDisplay} />
+
+        <ShoppingCart
+        cart={cart}
+        totalPrice={totalPrice}
+        cartDisplay={cartDisplay}
+        handleAddItem={handleAddItem}
+        handleRemoveItem={handleRemoveItem}
+        handleOpenCartDisplay={handleOpenCartDisplay}
+        handleCloseCartDisplay={handleCloseCartDisplay}
+        />
 
         <div className="content">
           <Routes>
