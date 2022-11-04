@@ -72,3 +72,17 @@
 .modal-body {
     padding: 16px;
 }
+
+.modal-button {
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 10%;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.modal-button:hover {
+    opacity: 1;
+}

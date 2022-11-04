@@ -24,8 +24,8 @@ function ShoppingCart({
                 </div>
                 <div className="modal-body">
                     <p>Some text in the Modal Body</p>
-                    <p>Some other text...</p>
-                    <button>Bruh</button>
+                    <p>Total: {totalPrice} Geo</p>
+                    <button className="modal-button" type="button">Checkout</button>
                 </div>
             </div>
         </div>
