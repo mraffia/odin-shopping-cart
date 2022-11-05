@@ -31,16 +31,16 @@
 }
 
 .card-name {
-    margin: 15px 15px 0 15px;
+    margin: 16px 16px 0 16px;
     font-weight: bold;
 }
 
 .card-price {
-    margin: 10px 15px 0 15px;
+    margin: 10px 16px 0 16px;
 }
 
 .card-button {
-    margin: 10px 15px 15px 15px;
+    margin: 10px 16px 16px 16px;
     padding: 16px;
     border: none;
     cursor: pointer;
