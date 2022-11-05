@@ -23,9 +23,8 @@
     background-color: #fefefe;
     margin: auto;
     padding: 0;
-    border: 1px solid #888;
-    width: 80%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
@@ -36,13 +35,13 @@
 
 /* Add Animation */
 @-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0} 
-    to {top:0; opacity:1}
+    from { top:-50px; opacity:0 } 
+    to { top:0; opacity:1 }
 }
 
 @keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
+    from { top:-50px; opacity:0 }
+    to { top:0; opacity:1 }
 }
 
 /* The Close Button */
@@ -94,11 +93,14 @@ button:hover {
     margin: 16px;
     display: grid;
     grid-template-columns: 70px 1fr 1fr;
-    max-width: 50%;
+    max-width: 100%;
 }
 
 .cart-item-image {
     max-width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .cart-item-info-container {
@@ -115,6 +117,7 @@ button:hover {
 .cart-item-counter-container {
     display: flex;
     align-items: center;
+    justify-content: end;
 }
 
 .increment-button,
@@ -129,10 +132,11 @@ button:hover {
 
 .modal-total {
     margin: 16px;
+    font-size: 20px;
     font-weight: bold;
 }
 
 .modal-button {
     margin: 0 16px 16px 16px;
-    width: 10%;
+    width: 25%;
 }
