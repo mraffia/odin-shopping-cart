@@ -67,18 +67,30 @@ function App() {
   }
 
   useEffect(() => {
-    let total = 0;
+    let updatedTotalPrice = 0;
+    let updatedTotalItems = 0;
+    
     for (let i = 0; i < cart.length; i++) {
-      total += cart[i].total;
+      updatedTotalPrice += cart[i].total;
+      updatedTotalItems += cart[i].quantity;
     }
-    setTotalPrice(total);
+    setTotalPrice(updatedTotalPrice);
+    setTotalItems(updatedTotalItems);
     console.log(cart);
   }, [cart]);
+
+  useEffect(() => {
+    console.log(totalPrice);
+    console.log(totalItems);
+  }, [totalPrice, totalItems]);
 
   return (
     <BrowserRouter>
       <div className="container">
-        <Nav handleOpenCartDisplay={handleOpenCartDisplay} />
+        <Nav 
+        totalItems={totalItems}
+        handleOpenCartDisplay={handleOpenCartDisplay} 
+        />
 
         <ShoppingCart
         cart={cart}
