@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Nav.css';
+import CartLogo from '../images/cart.svg';
 
 function Nav({ totalItems, handleOpenCartDisplay }) {
     let bubbleClass = "notify-bubble";
@@ -20,9 +21,9 @@ function Nav({ totalItems, handleOpenCartDisplay }) {
                 <Link to="/products" className="nav-link">
                     <li>Products</li>
                 </Link>
-                <div className="notify-container">
-                    <div className={bubbleClass}>{totalItems}</div>
-                    <li onClick={() => handleOpenCartDisplay()}>Cart</li>
+                <div className="notify-container" onClick={() => handleOpenCartDisplay()}>
+                    <span className={bubbleClass}>{totalItems}</span>
+                    <img className="cart-logo" src={CartLogo} alt="Cart" />
                 </div>
             </ul>
         </nav>
