@@ -24,13 +24,36 @@
     text-decoration: none;
 }
 
-.nav-link {
+.nav-link,
+.notify-container {
     color: white;
     text-decoration: none;
     transition: transform .2s;
     cursor: pointer;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.notify-container:hover {
     transform: scale(1.1);
+}
+
+.notify-container {
+    position: relative;
+    display: inline-block;
+}
+
+.notify-bubble {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    padding: 2px 5px 2px 5px;
+    background-color: green;
+    font-size: 0.7em;
+    border: none;
+    border-radius: 50%;
+    display: none;
+}
+
+.bubble-active {
+    display: block;
 }
