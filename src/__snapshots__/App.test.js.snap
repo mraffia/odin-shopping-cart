@@ -82,6 +82,7 @@ exports[`App component renders header/nav, HomePage content, and footer 1`] = `
         >
           <div
             class="modal-total"
+            data-testid="modal-total"
           >
             Total: 
             0

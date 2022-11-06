@@ -26,18 +26,6 @@ describe("App component", () => {
     expect(screen.getByTestId("notify-bubble")).not.toHaveClass('bubble-active');
   });
 
-  it("shows cart notification bubble when user adds an item into cart", () => {
-    render(<App />);
-
-    const productsPageLink = screen.getByRole("link", { name: "Products" });
-    userEvent.click(productsPageLink);
-    const addToCart = screen.getAllByRole("button", { name: "Add to cart" });
-    userEvent.click(addToCart[0]);
-
-    expect(screen.getByTestId("notify-bubble")).toHaveClass('bubble-active');
-    expect(screen.getByTestId("notify-bubble").textContent).toMatch('1');
-  });
-
   it("shows the correct cart notification bubble number when user adds one or multiple items into cart", () => {
     render(<App />);
 
@@ -46,6 +34,7 @@ describe("App component", () => {
     const addToCart = screen.getAllByRole("button", { name: "Add to cart" });
     userEvent.click(addToCart[0]);
 
+    expect(screen.getByTestId("notify-bubble")).toHaveClass('bubble-active');
     expect(screen.getByTestId("notify-bubble").textContent).toMatch('1');
     
     userEvent.click(addToCart[1]);
@@ -68,19 +57,6 @@ describe("App component", () => {
     expect(screen.getByTestId("cart-modal")).not.toHaveClass('modal-active');
   });
 
-  it("shows an item in cart modal when user adds an item into cart", () => {
-    render(<App />);
-
-    const productsPageLink = screen.getByRole("link", { name: "Products" });
-    userEvent.click(productsPageLink);
-    const addToCart = screen.getAllByRole("button", { name: "Add to cart" });
-    userEvent.click(addToCart[0]);
-    const navCart = screen.getByTestId("nav-cart");
-    userEvent.click(navCart);
-
-    expect(screen.getAllByTestId("cart-item")[0]).toBeInTheDocument();
-  });
-
   it("shows the correct number of items in cart modal when user adds one or more item into cart", () => {
     render(<App />);
 
@@ -94,6 +70,20 @@ describe("App component", () => {
 
     expect(screen.getAllByTestId("cart-item")[0]).toBeInTheDocument();
     expect(screen.getAllByTestId("cart-item")[1]).toBeInTheDocument();
+  });
+
+  it("shows the correct total price of all the items in cart modal when user adds one or more item into cart", () => {
+    render(<App />);
+
+    const productsPageLink = screen.getByRole("link", { name: "Products" });
+    userEvent.click(productsPageLink);
+    const addToCart = screen.getAllByRole("button", { name: "Add to cart" });
+    userEvent.click(addToCart[0]);
+    userEvent.click(addToCart[1]);
+    const navCart = screen.getByTestId("nav-cart");
+    userEvent.click(navCart);
+
+    expect(screen.getByTestId("modal-total").textContent).toMatch('Total: 650 Geo');
   });
 
 });
