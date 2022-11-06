@@ -76,13 +76,7 @@ function App() {
     }
     setTotalPrice(updatedTotalPrice);
     setTotalItems(updatedTotalItems);
-    console.log(cart);
   }, [cart]);
-
-  useEffect(() => {
-    console.log(totalPrice);
-    console.log(totalItems);
-  }, [totalPrice, totalItems]);
 
   return (
     <BrowserRouter>
