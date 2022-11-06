@@ -27,7 +27,7 @@ function ShoppingCart({
         <div className={modalClass} data-testid="cart-modal">
             <div className="modal-content">
                 <div className="modal-header">
-                    <span className="close-modal" onClick={() => handleCloseCartDisplay()}>&times;</span>
+                    <span className="close-modal" onClick={() => handleCloseCartDisplay()} data-testid="close-modal">&times;</span>
                     <h2 className="modal-title">Your Shopping Cart</h2>
                 </div>      
                 <div className="modal-body">
