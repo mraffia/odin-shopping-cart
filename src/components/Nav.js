@@ -22,7 +22,7 @@ function Nav({ totalItems, handleOpenCartDisplay }) {
                     <li>Products</li>
                 </Link>
                 <li className="nav-link notify-container" onClick={() => handleOpenCartDisplay()} data-testid="nav-cart">
-                    <span className={bubbleClass}>{totalItems}</span>
+                    <span className={bubbleClass} data-testid="notify-bubble">{totalItems}</span>
                     <img className="cart-logo" src={CartLogo} alt="Cart" />
                 </li>
             </ul>
