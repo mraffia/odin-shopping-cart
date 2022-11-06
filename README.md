@@ -7,4 +7,4 @@ https://mraffia.github.io/odin-shopping-cart/
 ### Project Description
 
 ### Tools
-HTML, CSS (Flexbox & CSS Grid), Javascript, React (function component, state, props, hooks), react-router-dom, Jest (React Testing Library).
+HTML, CSS (Flexbox & CSS Grid), Javascript, React (function component, state, props, hooks), react-router-dom, Jest with react testing library (userEvent, mocks).
