@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage component renders HomePage content 1`] = `
+<div>
+  <div
+    class="home-container"
+  >
+    <div
+      class="home-subcontainer"
+    >
+      <div
+        class="home-texts-container"
+      >
+        <h1
+          class="home-heading"
+        >
+          Charms are gorgeous, mystical, one-of-a-kind accessories with a spark of power woven into their cores. Take a look at some of the Charms I have for sale!
+        </h1>
+        <p
+          class="home-text"
+        >
+          - Charm Lover Salubra
+        </p>
+        <a
+          href="/products"
+        >
+          <button
+            class="shop-button"
+            type="button"
+          >
+            Shop Now
+          </button>
+        </a>
+      </div>
+      <div
+        class="home-image-container"
+      />
+    </div>
+  </div>
+</div>
+`;
