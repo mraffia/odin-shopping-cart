@@ -11,17 +11,29 @@ import App from './App';
 // });
 
 describe("App component", () => {
-  it("renders header/nav, content, and footer", () => {
+  it("renders header/nav, HomePage content, and footer", () => {
     const { container } = render(<App />);
     expect(container).toMatchSnapshot();
   });
 
-  // it("shows cart modal after cart link in nav is clicked", () => {
-  //   render(<App />);
-  //   const cart = screen.getByTestId("nav-cart");
+  it("shows cart modal after cart logo in nav is clicked", () => {
+    render(<App />);
+    const cart = screen.getByTestId("nav-cart");
 
-  //   userEvent.click(cart);
+    userEvent.click(cart);
 
-  //   expect(screen.getByTestId("cart-modal")).toBeVisible();
-  // });
+    expect(screen.getByTestId("cart-modal")).toBeVisible();
+  });
+
+  it("shows cart notification bubble when some item's 'Add to cart' button is clicked and item goes into cart", () => {
+    render(<App />);
+    const productsPageLink = screen.getByRole("link", { name: "Products" });
+    userEvent.click(productsPageLink);
+
+    const addToCart = screen.getAllByRole("button", { name: "Add to cart" });
+    userEvent.click(addToCart[0]);
+
+    expect(screen.getByTestId("notify-bubble")).toBeVisible();
+  });
+
 });

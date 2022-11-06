@@ -40,7 +40,7 @@ function ProductCard({ item, handleAddItem }) {
             <div className="card-info-container">
                 <div className="card-name">{productName}</div>
                 <div className="card-price">{productPrice} Geo</div>
-                <button className="card-button" type="button" onClick={() => handleAddItem(item.name, item.price)}>Add to Cart</button>
+                <button className="card-button" type="button" onClick={() => handleAddItem(item.name, item.price)}>Add to cart</button>
             </div>
         </div>
     );
