@@ -24,16 +24,14 @@
     text-decoration: none;
 }
 
-.nav-link,
-.notify-container {
+.nav-link {
     color: white;
     text-decoration: none;
     transition: transform .2s;
     cursor: pointer;
 }
 
-.nav-link:hover,
-.notify-container:hover {
+.nav-link:hover {
     transform: scale(1.1);
 }
 
