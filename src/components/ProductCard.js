@@ -32,10 +32,6 @@ function ProductCard({ item, handleAddItem }) {
         finalImage = SteadyBody;
     }
 
-    function handleClick(item) {
-        handleAddItem(item.name, item.price);
-    }
-
     return (
         <div className="card-container">
             <div className="card-image-container">
@@ -44,7 +40,7 @@ function ProductCard({ item, handleAddItem }) {
             <div className="card-info-container">
                 <div className="card-name">{productName}</div>
                 <div className="card-price">{productPrice} Geo</div>
-                <button className="card-button" type="button" onClick={() => handleClick(item)}>Add to Cart</button>
+                <button className="card-button" type="button" onClick={() => handleAddItem(item.name, item.price)}>Add to Cart</button>
             </div>
         </div>
     );

@@ -16,14 +16,12 @@ describe("App component", () => {
     expect(container).toMatchSnapshot();
   });
 
-  it("shows cart modal after cart link in nav is clicked", () => {
-    render(<App />);
-    const cart = screen.getByTestId("nav-cart");
+  // it("shows cart modal after cart link in nav is clicked", () => {
+  //   render(<App />);
+  //   const cart = screen.getByTestId("nav-cart");
 
-    userEvent.click(cart);
+  //   userEvent.click(cart);
 
-    expect(screen.getByTestId("cart-modal")).toBeVisible();
-  });
-
-  
+  //   expect(screen.getByTestId("cart-modal")).toBeVisible();
+  // });
 });
