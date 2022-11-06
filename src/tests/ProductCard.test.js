@@ -9,8 +9,8 @@ describe("ProductCard component", () => {
         const item = { name: "Gathering Swarm", price: 300 };
         const handleAddItemMock = jest.fn();
         render(<ProductCard item={item} handleAddItem={handleAddItemMock} />);
+        
         const addToCart = screen.getByRole("button", { name: "Add to cart" });
-    
         userEvent.click(addToCart);
     
         expect(handleAddItemMock).toHaveBeenCalledTimes(1);

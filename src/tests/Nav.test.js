@@ -9,8 +9,8 @@ describe("Nav component", () => {
     it("calls handleOpenCartDisplay correct number of times", () => {
         const handleOpenCartDisplayMock = jest.fn();
         render(<Nav handleOpenCartDisplay={handleOpenCartDisplayMock} />, {wrapper: BrowserRouter});
+        
         const navCart = screen.getByTestId("nav-cart");
-    
         userEvent.click(navCart);
     
         expect(handleOpenCartDisplayMock).toHaveBeenCalledTimes(1);
