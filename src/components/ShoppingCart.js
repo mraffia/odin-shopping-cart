@@ -54,23 +54,23 @@ function ShoppingCart({
                         }
 
                         return (
-                            <div key={i} className="cart-item-container">
+                            <div key={i} className="cart-item-container" data-testid="cart-item">
                                 <div className="cart-item-image-container">
                                     <img className="cart-item-image" src={finalImage} alt={item.name} />
                                 </div>
                                 <div className="cart-item-info-container">
                                     <div className="cart-item-name">{item.name}</div>
-                                    <div className="cart-item-price">{item.total} Geo</div>
+                                    <div className="cart-item-price" data-testid="cart-item-price">{item.total} Geo</div>
                                 </div>
                                 <div className="cart-item-counter-container">
                                     <button className="increment-button" type="button" onClick={() => handleAddItem(item.name, itemPrice)}>+</button>
-                                    <div className="cart-item-quantity">{item.quantity}</div>
+                                    <div className="cart-item-quantity" data-testid="cart-item-quantity">{item.quantity}</div>
                                     <button className="decrement-button" type="button" onClick={() => handleRemoveItem(item.name, itemPrice)}>-</button>
                                 </div>
                             </div>
                         )
                     })}
-                    <div className="modal-total">Total: {totalPrice} Geo</div>
+                    <div className="modal-total" data-testid="modal-total">Total: {totalPrice} Geo</div>
                     <button className="modal-button" type="button">Checkout</button>
                 </div>
             </div>
