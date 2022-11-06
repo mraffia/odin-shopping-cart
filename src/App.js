@@ -79,7 +79,7 @@ function App() {
   }, [cart]);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <div className="container">
         <Nav 
         totalItems={totalItems}
