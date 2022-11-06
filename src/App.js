@@ -79,7 +79,7 @@ function App() {
   }, [cart]);
 
   return (
-    <BrowserRouter basename="/">
+    <BrowserRouter basename="/odin-shopping-cart">
       <div className="container">
         <Nav 
         totalItems={totalItems}
