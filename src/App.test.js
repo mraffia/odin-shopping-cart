@@ -86,4 +86,24 @@ describe("App component", () => {
     expect(screen.getByTestId("modal-total").textContent).toMatch('Total: 650 Geo');
   });
 
+  it("shows the correct quantity of an item in cart modal when user clicked increment or decrement button", () => {
+    render(<App />);
+
+    const productsPageLink = screen.getByRole("link", { name: "Products" });
+    userEvent.click(productsPageLink);
+    const addToCart = screen.getAllByRole("button", { name: "Add to cart" });
+    userEvent.click(addToCart[0]);
+    const navCart = screen.getByTestId("nav-cart");
+    userEvent.click(navCart);
+    const increment = screen.getByRole("button", { name: "+" });
+    userEvent.click(increment);
+
+    expect(screen.getByTestId("cart-item-quantity").textContent).toMatch('2');
+
+    const decrement = screen.getByRole("button", { name: "-" });
+    userEvent.click(decrement);
+
+    expect(screen.getByTestId("cart-item-quantity").textContent).toMatch('1');
+  });
+
 });
