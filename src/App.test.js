@@ -15,4 +15,15 @@ describe("App component", () => {
     const { container } = render(<App />);
     expect(container).toMatchSnapshot();
   });
+
+  it("shows cart modal after cart link in nav is clicked", () => {
+    render(<App />);
+    const cart = screen.getByTestId("nav-cart");
+
+    userEvent.click(cart);
+
+    expect(screen.getByTestId("cart-modal")).toBeVisible();
+  });
+
+  
 });
