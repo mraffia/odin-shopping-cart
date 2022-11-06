@@ -37,8 +37,9 @@ exports[`App component renders header/nav, content, and footer 1`] = `
             Products
           </li>
         </a>
-        <div
-          class="notify-container"
+        <li
+          class="nav-link notify-container"
+          data-testid="nav-cart"
         >
           <span
             class="notify-bubble"
@@ -50,12 +51,12 @@ exports[`App component renders header/nav, content, and footer 1`] = `
             class="cart-logo"
             src="cart.svg"
           />
-        </div>
+        </li>
       </ul>
     </nav>
     <div
       class="modal"
-      id="cart-modal"
+      data-testid="cart-modal"
     >
       <div
         class="modal-content"
