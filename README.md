@@ -1,11 +1,22 @@
 # odin-shopping-cart
 Shopping Cart project from Javascript section of the Full Stack Javascript Course on The Odin Project.
 
-### Project Website
+## Project Website
 https://mraffia.github.io/odin-shopping-cart
 
-### Project Description
-A mini e-commerce website implemented with React Router that has a "shopping cart" functionality.
+## Project Description
+A shopping cart application implemented with React Router.
 
-### Tools
-HTML, CSS (Flexbox & CSS Grid), Javascript, React (function component, state, props, hooks), React Router, Jest with React Testing Library.
+## Features
+- Navigate between the pages with a navigation bar
+- See all products in products page
+- See how many items ther are on the shopping cart
+- Add products to the shopping cart
+- Edit products quantity in the shopping cart
+
+## Tools
+- HTML
+- CSS
+- Javascript
+- React.js
+- Jest
