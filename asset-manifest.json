@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/odin-shopping-cart/static/css/main.882e9958.css",
-    "main.js": "/odin-shopping-cart/static/js/main.94b54ada.js",
+    "main.css": "/odin-shopping-cart/static/css/main.8c4fcdfb.css",
+    "main.js": "/odin-shopping-cart/static/js/main.213024f6.js",
     "static/media/longnail.png": "/odin-shopping-cart/static/media/longnail.8eb0f904c54a4754a4f2.png",
     "static/media/salubra.png": "/odin-shopping-cart/static/media/salubra.5c60710209c0b08e8bd5.png",
     "static/media/lifebloodHeart.png": "/odin-shopping-cart/static/media/lifebloodHeart.80bf6a905bb08585d1f9.png",
@@ -10,11 +10,11 @@
     "static/media/steadyBody.png": "/odin-shopping-cart/static/media/steadyBody.af8e474167dbaca88cea.png",
     "index.html": "/odin-shopping-cart/index.html",
     "static/media/cart.svg": "/odin-shopping-cart/static/media/cart.02309d6cfbe4cb93165b2c1cc8e18f47.svg",
-    "main.882e9958.css.map": "/odin-shopping-cart/static/css/main.882e9958.css.map",
-    "main.94b54ada.js.map": "/odin-shopping-cart/static/js/main.94b54ada.js.map"
+    "main.8c4fcdfb.css.map": "/odin-shopping-cart/static/css/main.8c4fcdfb.css.map",
+    "main.213024f6.js.map": "/odin-shopping-cart/static/js/main.213024f6.js.map"
   },
   "entrypoints": [
-    "static/css/main.882e9958.css",
-    "static/js/main.94b54ada.js"
+    "static/css/main.8c4fcdfb.css",
+    "static/js/main.213024f6.js"
   ]
 }
