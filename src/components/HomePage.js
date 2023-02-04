@@ -9,7 +9,7 @@ function HomePage() {
           <div className="home-texts-container">
             <h1 className="home-heading">Charms are gorgeous, mystical, one-of-a-kind accessories with a spark of power woven into their cores. Take a look at some of the Charms I have for sale!</h1>
             <p className="home-text">- Charm Lover Salubra</p>
-            <Link to="/products">
+            <Link to="/products" className="shop-link">
               <button className="shop-button" type="button" >Shop Now</button> 
             </Link>
           </div>

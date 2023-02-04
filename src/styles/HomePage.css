@@ -44,11 +44,15 @@
     margin-bottom: 36px;
 }
 
+.shop-link {
+    width: 240px;
+}
+
 .shop-button {
     padding: 16px;
     border: none;
     cursor: pointer;
-    border-radius: 48px;
+    border-radius: 8px;
     width: 240px;
     font-weight: bold;
     font-size: 20px;
