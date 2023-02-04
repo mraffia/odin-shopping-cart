@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import './App.css';
 import Nav from './components/Nav.js';
 import HomePage from './components/HomePage.js';
@@ -79,7 +79,7 @@ function App() {
   }, [cart]);
 
   return (
-    <BrowserRouter basename="/odin-shopping-cart">
+    <HashRouter>
       <div className="container">
         <Nav 
         totalItems={totalItems}
@@ -112,7 +112,7 @@ function App() {
           </a>
         </div>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
